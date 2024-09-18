@@ -20,8 +20,6 @@
 #define SWITCH_MINS 0x04  // PF3: Increment minutes (reuses mode switch)
 #define SWITCH_SECS 0x02  // PF1: Increment seconds
 
-//extern volatile uint8_t hours, mins, secs;  // Global variables for time
-extern volatile uint8_t alarmHours, alarmMinutes;  // Global variables for alarm time
 extern volatile SysMode curMode;  // Externally defined mode
 
 void Sw_Init(void){volatile unsigned long delay;
@@ -41,7 +39,7 @@ void Sw_Init(void){volatile unsigned long delay;
 //chech if switch is pressed
 int Switch_Press(uint32_t switchMask){
 	if(!(GPIO_PORTF_DATA_R & switchMask)){ // if the switch is pressed
-		SysTick_Wait10ms(debounce);
+		//SysTick_Wait10ms(debounce);
 		if(!(GPIO_PORTF_DATA_R&switchMask)){
 			return 1;
 		}
@@ -49,7 +47,6 @@ int Switch_Press(uint32_t switchMask){
 }
 
 void SwitchInput(void){
-	uint32_t hours, mins, secs;
 	if (Switch_Press(SWITCH_MODE)) {
         curMode = (curMode + 1) % 3;  // Cycle between MAIN_MODE, SET_TIME_MODE, SET_ALARM_MODE
         while (!(GPIO_PORTF_DATA_R & SWITCH_MODE));  // Simple debounce: wait for release
@@ -59,10 +56,10 @@ void SwitchInput(void){
 			hours = (hours + 1) % 24; // Increment hours, wrap around after 23
 		}
 		if(Switch_Press(SWITCH_MINS)){
-			mins = (mins + 1) % 60; // Increment minutes, wrap around after 59
+			minutes = (minutes + 1) % 60; // Increment minutes, wrap around after 59
 		}
 		if(Switch_Press(SWITCH_SECS)){
-			secs = (secs + 1) % 60; // Increment seconds, wrap around after 59
+			seconds = (seconds + 1) % 60; // Increment seconds, wrap around after 59
 		}
 	}
 	if(curMode == SET_ALARM_MODE){
@@ -70,7 +67,7 @@ void SwitchInput(void){
 			hours = (hours + 1) % 24; // Increment hours, wrap around after 23
 		}
 		if(Switch_Press(SWITCH_HOURS)){
-			mins = (mins + 1) % 60; // Increment minutes, wrap around after 59
+			minutes = (minutes + 1) % 60; // Increment minutes, wrap around after 59
 		}
 	}
 }

@@ -36,7 +36,6 @@
 #include "../inc/ST7735.h"
 #include "../inc/PLL.h"
 #include "../inc/tm4c123gh6pm.h"
-#include "../inc/Timer0A.h"
 #include "Lab3.h"
 #include "Switch.h"
 #include "Timer.h"
@@ -44,18 +43,45 @@
 #include "Speaker.h"
 
 
-// ---------- Prototypes   -------------------------
+// ---------- Definitions --------------------
+#define PF0	(*((volatile uint32_t *)0x40025004))		// SW1 (0x0004)
+#define PF1	(*((volatile uint32_t *)0x40025008))		// SW2 (0x0008)
+#define PF2	(*((volatile uint32_t *)0x40025010))		// SW3 (0x0010)
+#define PF3	(*((volatile uint32_t *)0x40025020))		// SW4 (0x0020)
+								// LED for debugging
+
+
+// ---------- Prototypes   -------------------
 void DisableInterrupts(void); // Disable interrupts
 void EnableInterrupts(void);  // Enable interrupts
 void WaitForInterrupt(void);  // low power mode
 
+//initialize current time
+uint8_t hours = 1;
+uint8_t mhours = 13;
+uint8_t minutes = 25;
+uint8_t seconds = 12;
+
+//initialize displayMode and mode
+uint8_t displayMode = 0; 		//analog
+uint8_t menu = 0; 					//main
+
+
+
+// ---------- Main --------------------------
 int main(void){
   DisableInterrupts();
-  PLL_Init(Bus80MHz);    // bus clock at 80 MHz
-  // write this
+  PLL_Init(Bus80MHz);    						// bus clock at 80 MHz
+	Timer0A_Init(1);									// Initialize Timer0A with priority 1
+	Speaker_Init();
+	ST7735_InitR(INITR_REDTAB);				// initialize LCD
+	
+	
+	DrawClock();
+	
   EnableInterrupts();
   while(1){
-      // write this
+		SwitchInput();
   }
 }
 

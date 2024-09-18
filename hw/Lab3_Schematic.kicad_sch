@@ -2554,7 +2554,13 @@
 		(uuid "b74deaa4-3eb0-48b7-aaab-13edf6eb5522")
 	)
 	(junction
-		(at 138.43 132.08)
+		(at 120.65 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d7a5f655-16a5-429d-a22d-41152d7f206d")
+	)
+	(junction
+		(at 135.89 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dc735731-9975-40b0-b778-7ce058eb97eb")
@@ -2597,7 +2603,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.935 120.65) (xy 116.84 120.65)
+			(xy 103.505 120.65) (xy 105.41 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2637,13 +2643,13 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 132.08) (xy 128.27 134.62)
+			(xy 120.65 132.08) (xy 128.27 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "15fd0279-fa1e-4e25-8bc2-30d20f8890d4")
+		(uuid "10b94a4d-e0b2-4e6d-a8e2-3c51cae16ef6")
 	)
 	(wire
 		(pts
@@ -2857,6 +2863,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 132.08) (xy 128.27 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "549dfd90-3090-4602-9401-2ca8e687ef2a")
+	)
+	(wire
+		(pts
 			(xy 23.495 49.53) (xy 25.4 49.53)
 		)
 		(stroke
@@ -2927,7 +2943,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 120.65) (xy 116.84 121.92)
+			(xy 105.41 120.65) (xy 105.41 121.92)
 		)
 		(stroke
 			(width 0)
@@ -2947,7 +2963,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 132.08) (xy 128.27 132.08)
+			(xy 105.41 132.08) (xy 120.65 132.08)
 		)
 		(stroke
 			(width 0)
@@ -2957,7 +2973,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 120.65) (xy 138.43 120.65)
+			(xy 134.62 120.65) (xy 135.89 120.65)
 		)
 		(stroke
 			(width 0)
@@ -3077,7 +3093,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 120.65) (xy 128.27 120.65)
+			(xy 119.38 120.65) (xy 120.65 120.65)
 		)
 		(stroke
 			(width 0)
@@ -3087,7 +3103,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 132.08) (xy 149.86 132.08)
+			(xy 135.89 132.08) (xy 149.86 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3137,7 +3153,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 120.65) (xy 128.27 121.92)
+			(xy 120.65 120.65) (xy 120.65 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3167,7 +3183,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 120.65) (xy 138.43 121.92)
+			(xy 135.89 120.65) (xy 135.89 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3177,7 +3193,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 132.08) (xy 138.43 132.08)
+			(xy 128.27 132.08) (xy 135.89 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3737,9 +3753,9 @@
 			)
 		)
 	)
-	(global_label "PF0"
+	(global_label "PF1"
 		(shape input)
-		(at 114.935 120.65 180)
+		(at 103.505 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3749,7 +3765,7 @@
 		)
 		(uuid "5c06de23-fac2-46c1-92d1-71a2b68d17ce")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.2003 120.65 0)
+			(at 96.7703 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3935,9 +3951,9 @@
 			)
 		)
 	)
-	(global_label "PF1"
+	(global_label "PF2"
 		(shape input)
-		(at 127 120.65 180)
+		(at 119.38 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3947,7 +3963,7 @@
 		)
 		(uuid "813b2dc9-a091-4fb4-8cf0-7b9671d9b5b7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.2653 120.65 0)
+			(at 112.6453 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4133,9 +4149,9 @@
 			)
 		)
 	)
-	(global_label "PF2"
+	(global_label "PF3"
 		(shape input)
-		(at 137.16 120.65 180)
+		(at 134.62 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4145,7 +4161,7 @@
 		)
 		(uuid "ae321157-8073-4c8f-885e-42ded6144841")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 130.4253 120.65 0)
+			(at 127.8853 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4177,7 +4193,7 @@
 			)
 		)
 	)
-	(global_label "PF3"
+	(global_label "PF4"
 		(shape input)
 		(at 148.59 120.65 180)
 		(fields_autoplaced yes)
@@ -5408,7 +5424,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 116.84 127 90)
+		(at 105.41 127 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5417,7 +5433,7 @@
 		(fields_autoplaced yes)
 		(uuid "765ba594-9a0e-47d4-8151-41f1527fcfc2")
 		(property "Reference" "SW102"
-			(at 118.11 125.73 90)
+			(at 106.68 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5425,8 +5441,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "DOWN"
-			(at 118.11 128.27 90)
+		(property "Value" "SetTime"
+			(at 106.68 128.27 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5435,7 +5451,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 111.76 127 0)
+			(at 100.33 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5444,7 +5460,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 111.76 127 0)
+			(at 100.33 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5453,7 +5469,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 116.84 127 0)
+			(at 105.41 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5478,7 +5494,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 128.27 127 90)
+		(at 120.65 127 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5487,7 +5503,7 @@
 		(fields_autoplaced yes)
 		(uuid "8c2af551-4c72-44d0-a996-c792f7fd09d3")
 		(property "Reference" "SW103"
-			(at 129.54 125.73 90)
+			(at 121.92 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5495,8 +5511,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LEFT"
-			(at 129.54 128.27 90)
+		(property "Value" "SetAlarm"
+			(at 121.92 128.27 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5505,7 +5521,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 123.19 127 0)
+			(at 115.57 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5514,7 +5530,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 123.19 127 0)
+			(at 115.57 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5523,7 +5539,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 128.27 127 0)
+			(at 120.65 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5548,7 +5564,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 138.43 127 90)
+		(at 135.89 127 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5557,7 +5573,7 @@
 		(fields_autoplaced yes)
 		(uuid "9a273496-f966-4e28-a0c4-630569e1af4b")
 		(property "Reference" "SW104"
-			(at 139.7 125.73 90)
+			(at 137.16 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5565,8 +5581,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "RIGHT"
-			(at 139.7 128.27 90)
+		(property "Value" "AlarmOff"
+			(at 137.16 128.27 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5575,7 +5591,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 133.35 127 0)
+			(at 130.81 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5584,7 +5600,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 133.35 127 0)
+			(at 130.81 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5593,7 +5609,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 138.43 127 0)
+			(at 135.89 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5701,7 +5717,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "MODE"
+		(property "Value" "DisplayMode"
 			(at 151.13 128.27 90)
 			(effects
 				(font

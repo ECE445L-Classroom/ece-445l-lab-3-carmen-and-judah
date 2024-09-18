@@ -13,8 +13,6 @@
 #ifndef _SWITCH_H_
 #define _SWITCH_H_
 
-//extern volatile uint8_t hours, mins, secs;  // Global variables for time
-
 
 // Define system modes for the alarm clock
 typedef enum {

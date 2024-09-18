@@ -17,7 +17,7 @@ void Speaker_Init(void){
   
 	GPIO_PORTF_DIR_R |= SPEAKER;   // Set PF2 as output
   GPIO_PORTF_DEN_R |= SPEAKER;   // Enable digital function for PF2
-	GPIO_PORTA_AFSEL_R &= ~SPEAKERMASK; 
+	GPIO_PORTA_AFSEL_R &= ~SPEAKERMASK;
 	GPIO_PORTA_AMSEL_R &= ~SPEAKERMASK;
 }
 
